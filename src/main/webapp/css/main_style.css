@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+.contents01 {
+	font-size : 30px;
+}
+.contents02 {
+	font-size : 24px;
+}
+
+
+/* === header area ===  */
+
+.header_bg {
+	margin : auto;
+	background-image : url("img/table_img.jpg");
+	background-size: cover;
+	width : 100%;
+	height : 600px;
+}
+
+.header {
+	font-family: 'Noto Sans KR', sans-serif;
+	display : flex;
+	justify-content : space-between;
+	margin : auto;
+	padding : 0 20px;
+	width : 1280px;
+	height : 100px;
+	/*
+	background-color : #1e90ff;
+	*/
+}
+
+.header > ul {
+	display : flex;
+	margin-top : 30px;
+}
+.header .logo  {
+	margin-top : -15px;
+}
+
+.header > ul > li {
+	font-size: 20px;
+}
+.header > ul > li > a {
+	padding : 10px 20px;
+}
+.header > ul > li > a:hover {
+	background-color: #000;
+	color : #fff;
+	transition : 1s ease;
+}
+
+.header > ul > li > a,
+.header > ul > li > div > a {
+	color : #000;
+}
+
+.header > .nav_title > li > .logo {
+	font-size : 40px;
+	font-weight: bold;
+	font-family: 'Jua', sans-serif;
+}
+
+.header > .nav_title > li:not(:first-child) {
+	margin-left : 40px;
+}
+.header > .nav_menu > li:not(:last-child) {
+	margin-right : 20px;
+}
+
+.add_text {
+	height : 150px;
+	margin : auto;
+	margin-top : 180px;
+	font-family: 'Source Code Pro', monospace;
+	text-align : center;
+	font-size : 60px;
+	text-shadow: 6px 2px 2px gray;
+	letter-spacing : -5px;
+	color : #fff;
+}
+
+/* === main_index_01 부분  === */
+
+.main_index_01 {
+	width : 1280px;
+	height : 300px;
+	margin : 50px auto;
+	background: #ddd;
+}
+.main_index_01 > .intro {
+	width : 1100px;
+	padding-top : 27px;
+	margin : auto;
+	
+}
+.main_index_01 > .intro > li > .intro_content {
+	font-size : 20px;
+}
+
+.main_index_01 > .intro > li {
+	padding : 10px;
+}
+
+.main_index_01 > .intro > li > button {
+	width : 200px;
+	height : 50px;
+	font-size : 19px;
+	color : #fff;
+	background: #0080c0;
+	cursor: pointer;
+}
+
+
+/* === main_index_02 === */
+
+.main_index_02 {
+	width : 1280px;
+	height : 600px;
+	margin : 20px auto;
+	background : #ddd;
+	text-align: center;
+}
+
+.main_index_02 > .board_intro {
+	display : flex;
+	justify-content : space-between;
+	width : 1100px;
+	margin : auto;
+}
+
+.main_index_02 > .board_intro > .ex_img > img {
+	width : 450px;
+	height : 400px;
+}
+
+.main_index_02 > .board_intro > .contents02 {
+	padding : 50px;
+	line-height : 50px;
+}
+
+
+
+
+
+/* === footer ===  */
+footer {
+	margin-top : 50px;
+	height : 100px;
+	background: navy;
+}
+
+
+
