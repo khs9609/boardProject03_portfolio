@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="css/list_style.css">
+<link rel="stylesheet" type="text/css" href="css/List_style.css">
 <title>Insert title here</title>
 </head>
 <style>
@@ -81,16 +81,23 @@
 
 		<div class="board_wrap">
 			<div class="board_title">
-				<h1>게시판입니다.</h1>
-				<p>커뮤니티입니다. 현재 n개의 글이 작성되있다.</p>
+				<strong>게시판입니다.</strong>
+				<p>자유롭게 글을 게시할 수 있는 커뮤니티 입니다. 현재 n개의 글이 작성되어 있습니다.</p>
 			</div>
 			<div class="board_list">
 				<div class="top">
-					<div class="num">조회수</div>
+					<div class="num">번호</div>
 					<div class="title">제목</div>
 					<div class="writer">글쓴이</div>
 					<div class="date">작성일</div>
 					<div class="count">조회수</div>
+				</div>
+				<div>
+					<div class="num">1</div>
+					<div class="title">제목이 표시됩니다.</div>
+					<div class="writer">홍길동</div>
+					<div class="date">2021-10-25</div>
+					<div class="count">15</div>
 				</div>
 				<div>
 					<div class="num">2</div>
@@ -106,16 +113,85 @@
 					<div class="date">2021-10-25</div>
 					<div class="count">15</div>
 				</div>
+				<div>
+					<div class="num">4</div>
+					<div class="title">제목이 표시됩니다.</div>
+					<div class="writer">홍길동</div>
+					<div class="date">2021-10-25</div>
+					<div class="count">15</div>
+				</div>
+				<div>
+					<div class="num">5</div>
+					<div class="title">제목이 표시됩니다.</div>
+					<div class="writer">홍길동</div>
+					<div class="date">2021-10-25</div>
+					<div class="count">15</div>
+				</div>
+				<div>
+					<div class="num">6</div>
+					<div class="title">제목이 표시됩니다.</div>
+					<div class="writer">홍길동</div>
+					<div class="date">2021-10-25</div>
+					<div class="count">15</div>
+				</div>
+				<div>
+					<div class="num">7</div>
+					<div class="title">제목이 표시됩니다.</div>
+					<div class="writer">홍길동</div>
+					<div class="date">2021-10-25</div>
+					<div class="count">15</div>
+				</div>
+				<div>
+					<div class="num">8</div>
+					<div class="title">제목이 표시됩니다.</div>
+					<div class="writer">홍길동</div>
+					<div class="date">2021-10-25</div>
+					<div class="count">15</div>
+				</div>
+				<div>
+					<div class="num">9</div>
+					<div class="title">제목이 표시됩니다.</div>
+					<div class="writer">홍길동</div>
+					<div class="date">2021-10-25</div>
+					<div class="count">15</div>
+				</div>
+				<div>
+					<div class="num">10</div>
+					<div class="title">제목이 표시됩니다.</div>
+					<div class="writer">홍길동</div>
+					<div class="date">2021-10-25</div>
+					<div class="count">15</div>
+				</div>
 			</div>
-			<div class="board_button">
+			<div class="board_page">
+				<a href="#" class="bt_prev"><</a>
+				<a href="#" class="bt_num">1</a>
+				<a href="#" class="bt_num">2</a>
+				<a href="#" class="bt_num">3</a>
+				<a href="#" class="bt_num">4</a>
+				<a href="#" class="bt_num">5</a>
+				<a href="#" class="bt_next">></a>
+			</div>
 			
+			<div class="board_search">
+				<form id="frm" name="frm">
+					<input type="text" placeholder="검색어를 입력해주세요">
+					<a href="#">검색</a>
+				</form>
 			</div>
+			
+            <div class="bt_wrap">
+                <a href="#" class="on">목 록</a>
+                <a href="boardWrite.do">작 성</a>
+            </div>
+			
+			
 		</div>
 		
 <!-- ===== footer 부분 ===== -->	
 		<footer>
 			(c)2021 김효섭 Board Content Site <br>
-			울산광역시 남구 남구동 남구빌라 123-12 [ tel. 010-6543-9876 ]
+			울산광역시 남구 남구동 남구빌라 123-12 [ Tel. 010-6543-9876 ]
 		</footer>
 		
 </div>
