@@ -24,4 +24,11 @@ public class boardController {
 	public String BoardList() {
 		return "board/boardList";
 	}
+	
+	// 게시판 글쓰가
+	@RequestMapping("boardWrite.do")
+	public String boardWrite() {
+	
+		return "board/boardWrite";
+	}
 }
