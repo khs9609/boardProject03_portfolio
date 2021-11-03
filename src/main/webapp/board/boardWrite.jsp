@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="css/List_style.css">
+<link rel="stylesheet" type="text/css" href="css/write_style.css">
 <title>Insert title here</title>
 </head>
 <style>
@@ -82,112 +82,40 @@
 
 		<div class="board_wrap">
 			<div class="board_title">
-				<strong>게시판입니다.</strong>
-				<p>자유롭게 글을 게시할 수 있는 커뮤니티 입니다. 현재 n개의 글이 작성되어 있습니다.</p>
-			</div>
-			<div class="board_list">
-				<div class="top">
-					<div class="num">번호</div>
-					<div class="title">제목</div>
-					<div class="writer">글쓴이</div>
-					<div class="date">작성일</div>
-					<div class="count">조회수</div>
-				</div>
-				
-				<div>
-					<div class="num">1</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">2</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">3</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">4</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">5</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">6</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">7</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">8</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">9</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">10</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-			</div>
-			<div class="board_page">
-				<a href="#" class="bt_prev"><</a>
-				<a href="#" class="bt_num">1</a>
-				<a href="#" class="bt_num">2</a>
-				<a href="#" class="bt_num">3</a>
-				<a href="#" class="bt_num">4</a>
-				<a href="#" class="bt_num">5</a>
-				<a href="#" class="bt_next">></a>
+				<strong>글쓰기</strong>
+				<p>자유롭게 글을 게시할 수 있는 커뮤니티 입니다.</p>
 			</div>
 			
-			<div class="board_search">
-				<form id="frm" name="frm">
-					<input type="text" placeholder="검색어를 입력해주세요">
-					<a href="#">검색</a>
-				</form>
+		<form id="frm">
+			<div class="board_write">
+				<div class="title">
+					<dl>
+						<dt>제목</dt>
+						<dd><input type="text" name="title" id="title" placeholder="제목 입력"></dd>
+					</dl>
+				</div>
+				<div class="info">
+					<dl>
+						<dt>이름</dt>
+						<dd><input type="text" name="name" id="name" placeholder="이름 입력"></dd>
+					</dl>
+					<dl>	
+						<dt>패스워드</dt>
+						<dd><input type="password" name="pass" id="pass" placeholder="패스워드 입력"></dd>
+					</dl>
+				</div>
+				<div class="cont">
+					<textarea placeholder="내용 입력" name="content" id="content"></textarea>
+				</div>
+				
 			</div>
 			
             <div class="bt_wrap">
-                <a href="#" class="on">목 록</a>
-                <a href="boardWrite.do">작 성</a>
+                <a href="" class="on" onclick="fn_submit();return false;">등 록</a>
+                <a href="boardList.do" >목 록</a>
             </div>
 			
-			
+		</form>
 		</div>
 		
 <!-- ===== footer 부분 ===== -->	
