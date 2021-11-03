@@ -14,11 +14,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
 
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
 <link rel="stylesheet" type="text/css" href="css/write_style.css">
 <title>Insert title here</title>
 </head>
 <style>
-
 *{
 	text-decoration: none;
 	color : #000;
@@ -26,10 +28,25 @@
 	margin : 0;
 	padding : 0;
 	border-collapse: collapse;
-	
 	font-family: 'Noto Sans KR', sans-serif;
 }
 </style>
+
+<script>
+	function fn_submit() {
+		
+		if($("#title").val() == "") {
+			alert("제목을 입력해주새욧!");
+			$("#title").focus();
+			return false;
+		}
+		
+	}
+
+</script>
+
+
+
 
 <body>
 	
@@ -60,7 +77,7 @@
 		
 <!-- ===== main_index_01 부분 ===== -->
 		
-		<div class="main_index_01">
+<!-- 		<div class="main_index_01">
 			<ul class="intro">
 				<li>
 					<h1>사이트 소개</h1>
@@ -76,14 +93,14 @@
 					<button type="button">커뮤니티로 이동 ></button>
 				</li>
 			</ul>		
-		</div>
+		</div> -->
 		
 <!-- ===== board_wrap 부분 ===== -->			
 
 		<div class="board_wrap">
 			<div class="board_title">
 				<strong>글쓰기</strong>
-				<p>자유롭게 글을 게시할 수 있는 커뮤니티 입니다.</p>
+				<p>작성된 게시글이 커뮤니티의 게시글로 게시됩니다.</p>
 			</div>
 			
 		<form id="frm">
