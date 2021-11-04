@@ -179,6 +179,11 @@
 .board_write .title input[type="text"] {
     width : 80%;
 }
+.board_write .info input[type="text"],
+.board_write .info input[type="password"] {
+	width : 290px;
+}
+
 .board_write .cont {
     border-bottom: 1px solid #000;
 }
