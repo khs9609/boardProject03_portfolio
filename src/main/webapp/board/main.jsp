@@ -40,7 +40,7 @@
 				<ul class="nav_title">
 					<li>
 						<div class="logo">
-							<a href="#">효섭이의 게시판</a>
+							<a href="main.do">효섭이의 게시판</a>
 						</div>
 					</li>
 					<li><a href="#">공지사항</a></li>
@@ -72,7 +72,7 @@
 					</div>
 				</li>
 				<li>
-					<button type="button">커뮤니티로 이동 ></button>
+					<button type="button" onclick="location='boardList.do' ">커뮤니티로 이동 ></button>
 				</li>
 			</ul>		
 		</div>
