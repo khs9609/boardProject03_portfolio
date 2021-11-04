@@ -17,5 +17,15 @@
 					sysdate ) 
 		</insert>
 		
+		<select id="boardDAO.selectBoard" resultClass="egovMap">
+			select 
+				unq,
+				title,
+				name,
+				hits,
+				to_char(rdate,'yyyy-mm-dd') rdate
+			from nboard
+		</select>
+		
 		
 </sqlMap>

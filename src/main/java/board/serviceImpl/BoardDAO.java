@@ -1,5 +1,7 @@
 package board.serviceImpl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 import board.service.BoardVO;
@@ -11,5 +13,10 @@ public class BoardDAO extends EgovAbstractDAO  {
 	public String insertBoard(BoardVO vo) {
 		return (String) insert("boardDAO.insertBoard", vo);
 	}
+
+	public List<?> selectBoard(BoardVO vo) {
+		return list("boardDAO.selectBoard", vo);
+	}
+
 
 }

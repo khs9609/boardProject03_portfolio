@@ -1,8 +1,11 @@
 package board.web;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -30,7 +33,13 @@ public class boardController {
 	
 	// 게시판 목록 보기
 	@RequestMapping("boardList.do")
-	public String BoardList() {
+	public String BoardList(BoardVO vo, ModelMap model) throws Exception {
+		
+		List<?> list = boardService.selectBoard(vo);
+		
+		model.addAttribute("list", list);
+		
+		
 		return "board/boardList";
 	}
 	
