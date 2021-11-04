@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,9 +29,8 @@
 	
 	font-family: 'Noto Sans KR', sans-serif;
 }
-
-	
 </style>
+
 <body>
 	
 <div class="wrap">
@@ -44,7 +45,7 @@
 						</div>
 					</li>
 					<li><a href="#">공지사항</a></li>
-					<li><a href="#">커뮤니티</a></li>
+					<li><a href="boardList.do">커뮤니티</a></li>
 				</ul>
 				<ul class="nav_menu">
 					<li><a href="">로그인</a></li>
@@ -92,71 +93,9 @@
 					<div class="date">작성일</div>
 					<div class="count">조회수</div>
 				</div>
+				
 				<div>
 					<div class="num">1</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">2</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">3</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">4</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">5</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">6</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">7</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">8</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">9</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
-				</div>
-				<div>
-					<div class="num">10</div>
 					<div class="title">제목이 표시됩니다.</div>
 					<div class="writer">홍길동</div>
 					<div class="date">2021-10-25</div>
@@ -181,8 +120,8 @@
 			</div>
 			
             <div class="bt_wrap">
-                <a href="#" class="on">목 록</a>
-                <a href="boardWrite.do">작 성</a>
+                <a href="boardWrite.do" class="on">작 성</a>
+                <a href="boardList.do">목 록</a>
             </div>
 			
 			
