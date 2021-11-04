@@ -66,7 +66,7 @@
 			success : function(data){
 				if(data == "ok"){
 					alert("글이 등록되었습니다.");
-					location : "boardList.do";
+					location="boardList.do";
 				}else{
 					alert("글 등록에 실패하였습니다. \n 다시 한번 확인해주세요");
 				}
