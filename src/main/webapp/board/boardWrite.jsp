@@ -36,10 +36,45 @@
 	function fn_submit() {
 		
 		if($("#title").val() == "") {
-			alert("제목을 입력해주새욧!");
+			alert("제목을 입력해주세요");
 			$("#title").focus();
 			return false;
 		}
+		if($("#name").val() == "") {
+			alert("이름을 입력해주세요");
+			$("#name").focus();
+			return false;
+		}
+		if($("#pass").val() == "") {
+			alert("패스워드을 입력해주세요");
+			$("#pass").focus();
+			return false;
+		}
+		if($("#content").val() == "") {
+			alert("내용을 입력해주세요");
+			$("#content").focus();
+			return false;
+		}
+		
+		var formData = $("#frm").serialize();
+		
+		$.ajax({
+			type : "POST",
+			data : formData,
+			url : "boardWriteSave.do",
+			dataType : "text",
+			success : function(data){
+				if(data == "ok"){
+					alert("글이 등록되었습니다.");
+					location : "boardList.do";
+				}else{
+					alert("글 등록에 실패하였습니다. \n 다시 한번 확인해주세요");
+				}
+			},
+			error : function(){
+				alert("오류 발생! /n 관리자에게 문의 바랍니다.");
+			},
+		});
 		
 	}
 
