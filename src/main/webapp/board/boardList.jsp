@@ -41,7 +41,7 @@
 				<ul class="nav_title">
 					<li>
 						<div class="logo">
-							<a href="#">효섭이의 게시판</a>
+							<a href="main.do">효섭이의 게시판</a>
 						</div>
 					</li>
 					<li><a href="#">공지사항</a></li>
@@ -73,7 +73,7 @@
 					</div>
 				</li>
 				<li>
-					<button type="button">커뮤니티로 이동 ></button>
+					<button type="button" onclick="location='boardList.do' ">커뮤니티로 이동 ></button>
 				</li>
 			</ul>		
 		</div>
@@ -94,14 +94,22 @@
 					<div class="count">조회수</div>
 				</div>
 				
+				<c:forEach var="list" items="${list }">
 				<div>
-					<div class="num">1</div>
-					<div class="title">제목이 표시됩니다.</div>
-					<div class="writer">홍길동</div>
-					<div class="date">2021-10-25</div>
-					<div class="count">15</div>
+					<div class="num">${list.unq }</div>
+					<div class="title">${list.title }</div>
+					<div class="writer">${list.name }</div>
+					<div class="date">${list.rdate }</div>
+					<div class="count">${list.hits }</div>
 				</div>
+				</c:forEach>
+				
 			</div>
+			
+            <div class="bt_wrap">
+                <a href="boardWrite.do" class="on">글쓰기</a>
+            </div>
+            
 			<div class="board_page">
 				<a href="#" class="bt_prev"><</a>
 				<a href="#" class="bt_num">1</a>
@@ -119,10 +127,6 @@
 				</form>
 			</div>
 			
-            <div class="bt_wrap">
-                <a href="boardWrite.do" class="on">작 성</a>
-                <a href="boardList.do">목 록</a>
-            </div>
 			
 			
 		</div>
