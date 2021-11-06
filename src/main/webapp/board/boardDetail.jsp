@@ -17,7 +17,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 
-<link rel="stylesheet" type="text/css" href="css/write_style.css">
+<link rel="stylesheet" type="text/css" href="css/detail_style.css">
 <title>Insert title here</title>
 </head>
 <style>
@@ -43,11 +43,11 @@
 				<ul class="nav_title">
 					<li>
 						<div class="logo">
-							<a href="#">효섭이의 게시판</a>
+							<a href="main.do">효섭이의 게시판</a>
 						</div>
 					</li>
 					<li><a href="#">공지사항</a></li>
-					<li><a href="#">커뮤니티</a></li>
+					<li><a href="boardList.do">커뮤니티</a></li>
 				</ul>
 				<ul class="nav_menu">
 					<li><a href="">로그인</a></li>
