@@ -83,7 +83,7 @@
 		<div class="board_wrap">
 			<div class="board_title">
 				<strong>게시판입니다.</strong>
-				<p>자유롭게 글을 게시할 수 있는 커뮤니티 입니다. 현재 n개의 글이 작성되어 있습니다.</p>
+				<p>자유롭게 글을 게시할 수 있는 커뮤니티 입니다. 현재  ${total}개의 글이 작성되어 있습니다.</p>
 			</div>
 			<div class="board_list">
 				<div class="top">
@@ -94,14 +94,17 @@
 					<div class="count">조회수</div>
 				</div>
 				
+				<c:set var="cnt" value="${rowNum }" />
+				
 				<c:forEach var="list" items="${list }">
 				<div>
-					<div class="num">${list.unq }</div>
-					<div class="title">${list.title }</div>
+					<div class="num">${cnt }</div>
+					<div class="title" style="text-align:left"><a href="boardDetail.do?unq=${list.unq }">${list.title }</a></div>
 					<div class="writer">${list.name }</div>
 					<div class="date">${list.rdate }</div>
 					<div class="count">${list.hits }</div>
 				</div>
+				<c:set var="cnt" value="${cnt-1 }" />
 				</c:forEach>
 				
 			</div>
@@ -112,11 +115,9 @@
             
 			<div class="board_page">
 				<a href="#" class="bt_prev"><</a>
-				<a href="#" class="bt_num">1</a>
-				<a href="#" class="bt_num">2</a>
-				<a href="#" class="bt_num">3</a>
-				<a href="#" class="bt_num">4</a>
-				<a href="#" class="bt_num">5</a>
+				<c:forEach var="i" begin="1" end="${totalPage }">
+					<a href="boardList.do?viewPage=${i}" class="bt_num">${i}</a>
+				</c:forEach>
 				<a href="#" class="bt_next">></a>
 			</div>
 			
