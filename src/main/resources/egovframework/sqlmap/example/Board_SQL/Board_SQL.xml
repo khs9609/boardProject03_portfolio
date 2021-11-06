@@ -18,14 +18,34 @@
 		</insert>
 		
 		<select id="boardDAO.selectBoard" resultClass="egovMap">
-			select 
-				unq,
-				title,
-				name,
-				hits,
-				to_char(rdate,'yyyy-mm-dd') rdate
-			from nboard
+			select b.* from(
+				SELECT rownum rn, a.* FROM(
+					SELECT 
+						unq,
+						title,
+						name,
+						hits,
+						to_char(rdate,'yyyy-mm-dd') rdate
+					FROM nboard
+					ORDER BY unq DESC
+				) a ) b
+				WHERE rn >= #startIndex# and rn <![CDATA[ <= ]]> #endIndex#
 		</select>
+		
+		<select id="boardDAO.totalBoard" resultClass="java.lang.Integer">
+			select count(*) total from nboard
+		</select>
+		
+		<select id="boardDAO.selectDetail" resultClass="BoardVO">
+			SELECT 	unq,
+					title,
+					name,
+					content,
+					hits,
+					to_char(rdate, 'yyyy-mm-dd') as rdate
+			FROM nboard
+			WHERE unq='$unq$'
+		</select> 
 		
 		
 </sqlMap>

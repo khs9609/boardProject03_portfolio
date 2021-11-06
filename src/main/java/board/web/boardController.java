@@ -35,9 +35,34 @@ public class boardController {
 	@RequestMapping("boardList.do")
 	public String BoardList(BoardVO vo, ModelMap model) throws Exception {
 		
+		int unit = 5;
+		
+		int total = boardService.totalBoard(vo);
+
+		int totalPage = (int)Math.ceil((double)total/unit);
+		
+		int viewPage = vo.getViewPage();
+		// 임의로 viewPage를 건드려 없는 페이지를 불러오거나, 아무것도 건드리지 않았을 때
+		if(viewPage > totalPage || viewPage < 1) {
+			viewPage = 1;
+		}
+		
+		int startIndex = (viewPage-1) * unit + 1;
+		int endIndex = startIndex + (unit - 1);
+		
+		int startRowno = total - (viewPage - 1) * unit;
+
+		vo.setStartIndex(startIndex);
+		vo.setEndIndex(endIndex);
+		
+		
+		
 		List<?> list = boardService.selectBoard(vo);
 		
 		model.addAttribute("list", list);
+		model.addAttribute("total", total);
+		model.addAttribute("totalPage", totalPage);
+		model.addAttribute("rowNum", startRowno);
 		
 		
 		return "board/boardList";
@@ -61,5 +86,17 @@ public class boardController {
 		else msg ="fail";
 		
 		return msg;
+	}
+	
+	// 글 상세 보기
+	@RequestMapping("boardDetail.do")
+	public String selectDetail(BoardVO vo, ModelMap model) throws Exception {
+		
+		
+		BoardVO boardVO = boardService.selectDetail(vo.getUnq());
+		
+		model.addAttribute("boardVO", boardVO);
+		
+		return "board/boardDetail";
 	}
 }
