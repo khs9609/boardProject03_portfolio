@@ -108,4 +108,30 @@ public class boardController {
 		
 		return "board/boardDetail";
 	}
+	
+	//글 수정하기
+	@RequestMapping("boardModify.do")
+	public String boardModify(BoardVO vo, ModelMap model) throws Exception {
+		
+		BoardVO boardVO = boardService.selectDetail(vo.getUnq());
+		model.addAttribute("boardVO", boardVO);
+		
+		return "board/boardModify";
+	}
+	
+	@ResponseBody
+	@RequestMapping("boardModifySave.do")
+	public String updateModify(BoardVO vo) throws Exception {
+		
+		int result = 0;
+		int count = 0 /*비밀번호 일치 검사 추가 할것*/ ;
+		if(count == 1) {
+			result = boardService.updateBoard(vo);
+		}else {
+			result = -1;
+		}
+		
+		return result + "";
+	}
+	
 }

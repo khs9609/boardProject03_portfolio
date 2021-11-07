@@ -18,4 +18,8 @@ public interface BoardService {
 	
 	//조회수 증가
 	public int updateHits(int unq) throws Exception;
+	
+	//게시물 수정 처리
+	public int updateBoard(BoardVO vo) throws Exception;
+	
 }
