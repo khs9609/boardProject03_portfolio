@@ -95,6 +95,15 @@ public class boardController {
 		
 		BoardVO boardVO = boardService.selectDetail(vo.getUnq());
 		
+		
+		//내용 줄바꿈 처리, 띄어쓰기 다중 적용
+		String content = boardVO.getContent();
+		boardVO.setContent(content.replace("\n","<br>").replace(" ","&nbsp;"));
+		
+		
+		//조회수 증가
+		boardService.updateHits(vo.getUnq());
+		
 		model.addAttribute("boardVO", boardVO);
 		
 		return "board/boardDetail";

@@ -26,5 +26,9 @@ public class BoardDAO extends EgovAbstractDAO  {
 		return (BoardVO) select("boardDAO.selectDetail", unq);
 	}
 
+	public int updateHits(int unq) {
+		return update("boardDAO.updateHits", unq);
+	}
+
 
 }
