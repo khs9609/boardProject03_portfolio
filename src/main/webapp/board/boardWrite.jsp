@@ -93,11 +93,11 @@
 				<ul class="nav_title">
 					<li>
 						<div class="logo">
-							<a href="#">효섭이의 게시판</a>
+							<a href="main.do">효섭이의 게시판</a>
 						</div>
 					</li>
 					<li><a href="#">공지사항</a></li>
-					<li><a href="#">커뮤니티</a></li>
+					<li><a href="boardList.do">커뮤니티</a></li>
 				</ul>
 				<ul class="nav_menu">
 					<li><a href="">로그인</a></li>
