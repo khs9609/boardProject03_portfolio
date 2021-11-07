@@ -47,5 +47,10 @@
 			WHERE unq='$unq$'
 		</select> 
 		
+		<update id="boardDAO.updateHits">
+			update nboard set hits=hits+1
+				where unq=#unq#	
+		</update>
+		
 		
 </sqlMap>
