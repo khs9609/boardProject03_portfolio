@@ -37,6 +37,9 @@ public class BoardDAO extends EgovAbstractDAO  {
 	public int passCheck(BoardVO vo) {
 		return (int) select("boardDAO.passCheck", vo);
 	}
+	public int deleteBoard(BoardVO vo) {
+		return delete("boardDAO.deleteBoard", vo);
+	}
 
 
 

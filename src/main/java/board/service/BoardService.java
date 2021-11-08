@@ -24,4 +24,7 @@ public interface BoardService {
 	
 	//암호일치 검사
 	public int passCheck(BoardVO vo) throws Exception;
+	
+	// 글 삭제 처리
+	public int deleteBoard(BoardVO vo) throws Exception;
 }

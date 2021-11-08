@@ -119,6 +119,7 @@ public class boardController {
 		return "board/boardModify";
 	}
 	
+	// 글 수정처리
 	@ResponseBody
 	@RequestMapping("boardModifySave.do")
 	public String updateModify(BoardVO vo) throws Exception {
@@ -131,6 +132,16 @@ public class boardController {
 		}else {
 			result = -1;
 		}
+		
+		return result + "";
+	}
+	
+	//글 삭제 처리
+	@ResponseBody
+	@RequestMapping("boardDelete.do")
+	public String deleteBoard(BoardVO vo) throws Exception {
+		
+		int result = boardService.deleteBoard(vo);
 		
 		return result + "";
 	}

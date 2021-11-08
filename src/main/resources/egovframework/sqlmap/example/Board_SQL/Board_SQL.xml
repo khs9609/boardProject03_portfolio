@@ -59,12 +59,24 @@
 		
 		<!-- 게시판 수정하기 -->
 		<update id="boardDAO.updateBoard">
-		  update nboard set
+		  UPDATE nboard SET
 		  	title=#title#,
 		  	name=#name#,
-		  	content=#content#,
-		  where unq=#unq#
+		  	content=#content#
+		  WHERE unq=#unq#
 		</update>
+		
+		<!-- 암호 일치 검사 -->
+		<select id="boardDAO.passCheck" resultClass="java.lang.Integer">
+			select count(*) from nboard
+				where unq=#unq# and pass=#pass#
+		</select>
+		
+		<!-- 글 삭제처리 -->
+		<delete id="boardDAO.deleteBoard">
+		 delete from nboard
+		 where unq=#unq#
+		</delete>
 		
 		
 </sqlMap>
