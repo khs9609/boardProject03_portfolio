@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MemberController {
 
-	@RequestMapping("")
+	@RequestMapping("memberLogin.do")
 	public String loginWrite() {
-		return "";
+		return "member/memberLogin";
 	}
 }
