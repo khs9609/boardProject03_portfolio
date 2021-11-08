@@ -32,6 +32,37 @@
 }
 </style>
 
+<script>
+
+	$(function(){
+		$("#bt_del").click(function(){
+			var check = confirm("정말 삭제하시겠습니까?");
+			if(check == true){
+				
+				var formData = "unq="+${boardVO.unq};
+				
+				$.ajax({
+					type : "POST",
+					data : formData,
+					url : "boardDelete.do",
+					dataType : "text",
+					success : function(data){
+						if(data == "1"){
+							alert("글이 삭제되었습니다.");
+							location="boardList.do";
+						}else{
+							alert("글 삭제에 실패하였습니다. \n 다시 한번 확인해주세요");
+						}
+					},
+					error : function(){
+						alert("오류 발생! /n 관리자에게 문의 바랍니다.");
+					},
+				});
+				
+			}
+		});
+	});
+</script>
 
 <body>
 	
@@ -102,8 +133,8 @@
 						<dd>${boardVO.name }</dd>
 					</dl>
 					<dl>	
-						<dt>패스워드</dt>
-						<dd><input type="password" name="pass" id="pass" placeholder="패스워드 입력"></dd>
+						<dt>등록일</dt>
+						<dd>${boardVO.rdate }</dd>
 					</dl>
 				</div>
 				<div class="cont">${boardVO.content}</div>
@@ -111,8 +142,9 @@
 			</div>
 			
             <div class="bt_wrap">
-                <a href="" class="on">수 정</a>
+                <a href="boardModify.do?unq=${boardVO.unq }" class="bt_mod">수 정</a>
                 <a href="boardList.do" >목 록</a>
+                <a href="" class="bt_del" id="bt_del"onclick="fn_delete();return false;">삭 제</a>
             </div>
 			
 		</form>
