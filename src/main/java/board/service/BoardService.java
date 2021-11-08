@@ -22,4 +22,6 @@ public interface BoardService {
 	//게시물 수정 처리
 	public int updateBoard(BoardVO vo) throws Exception;
 	
+	//암호일치 검사
+	public int passCheck(BoardVO vo) throws Exception;
 }

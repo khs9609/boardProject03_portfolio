@@ -124,7 +124,8 @@ public class boardController {
 	public String updateModify(BoardVO vo) throws Exception {
 		
 		int result = 0;
-		int count = 0 /*비밀번호 일치 검사 추가 할것*/ ;
+		int count = boardService.passCheck(vo) ;
+		
 		if(count == 1) {
 			result = boardService.updateBoard(vo);
 		}else {

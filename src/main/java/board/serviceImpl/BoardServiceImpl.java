@@ -45,4 +45,9 @@ public class BoardServiceImpl implements BoardService {
 		return boardDAO.updateBoard(vo);
 	}
 
+	@Override
+	public int passCheck(BoardVO vo) throws Exception {
+		return boardDAO.passCheck(vo);
+	}
+
 }
