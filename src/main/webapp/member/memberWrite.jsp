@@ -14,9 +14,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+
 <link rel="stylesheet" type="text/css" href="css/memberCSS/memberWrite_style.css">
 <title>Insert title here</title>
 </head>
+
 <style>
 
 *{
@@ -30,6 +36,55 @@
 	font-family: 'Noto Sans KR', sans-serif;
 }
 </style>
+
+<script>
+	$(function() {
+		// 생년월일 선택
+	    $( "#birth" ).datepicker({
+	      changeMonth: true,
+	      changeYear: true,
+	      dayNamesMin : ['일','월','화','수','목','금','토'],
+	      monthNamesShort : ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+	      dateFormat : 'yy-mm-dd'
+	    });
+		
+		$("#idCheck").click(function(){
+			
+			var userid = $.trim( $("#userid").val() );
+			if(userid == "") {
+				alert("아이디를 입력해주세요");
+				$("#userid").focus();
+				return false;
+			}
+			
+			$.ajax({
+				
+				type: "POST",
+				data : "userid="+userid,
+				url: "idCheck.do",
+				dataType: "text",
+				success: function(msg) {
+					if(msg = "ok"){
+						alert("사용가능한 아이디입니다.");
+					}else{
+						alert("이미 사용중인 아이디입니다.");
+					}
+				},
+				error : function() {
+					alert("오류 발생 \n 다시 시도 혹은 관리자에게 문의주세요");
+				}
+				
+			});
+			
+			
+			
+		});
+		
+		
+		
+		
+	});
+</script>
 
 <body>
 	
@@ -48,23 +103,26 @@
 				<li><a href="boardList.do">커뮤니티</a></li>
 			</ul>
 			<ul class="nav_menu">
-				<li><a href="">로그인</a></li>
-				<li><a href="">회원가입</a></li>
+				<li><a href="memberLogin.do">로그인</a></li>
+				<li><a href="memberWrite.do">회원가입</a></li>
 			</ul>
 		</div>
 		
 	</div>
 		
 		
-<!-- ===== login_wrap 부분 ===== -->			
-	<div class="create_wrap">
+<!-- ===== member_wrap 부분 ===== -->			
+	<div class="member_write">
 		<form id="frm" name="frm">
-			<div class="title"><strong>회 원 가 입</strong></div>
+			<div class="title, contents01"><strong>회 원 가 입</strong></div>
 			
-				<div class="userid_title">
+				<div class="main">
 					<dl>
 						<dt>아이디</dt>
-						<dd><input type="text" id="userid" name="userid" placeholder="아이디"></dd>
+						<dd>
+							<input type="text" id="userid" name="userid" placeholder="아이디">
+							<button type="button" class="idCheck" id="idCheck">아이디 중복체크</button>
+						</dd>
 					</dl>
 					<dl>
 						<dt>비밀번호</dt>
@@ -76,14 +134,14 @@
 					</dl>
 				</div>
 				
-				<div class="userid_info">
+				<div class="info">
 					<dl>
 						<dt>이름</dt>
-						<dd><input type="text" id="name" name="name" placeholder="이름*"></dd>
+						<dd><input type="text" id="name" name="name" placeholder="이름"></dd>
 					</dl>
 					<dl>
 						<dt>성별</dt>
-						<dd>남<input type="radio" id="gender" name="gender" value="M">, 여<input type="radio" id="gender" name="gender" value="F"></dd>
+						<dd>남 <input type="radio" id="gender" name="gender" value="M">&nbsp;&nbsp;&nbsp;여 <input type="radio" id="gender" name="gender" value="F"></dd>
 					</dl>
 					<dl>
 						<dt>생년월일</dt>
@@ -91,12 +149,12 @@
 					</dl>
 					<dl>
 						<dt>연락처</dt>
-						<dd><input type="text" name="birth" id="birth" placeholder="010-0000-0000"></dd>
+						<dd><input type="text" name="phone" id="phone" placeholder="010-0000-0000"></dd>
 					</dl>
 					<dl>
                         <dt>주소</dt>
                         <dd>
-                        	<input type="text" name="zipcode" id="zipcode" readonly>
+                        	<input type="text" name="zipcode" id="zipcode" placeholder="우편번호 검색을 클릭해주세요" readonly>
                         	<button type="button" class="btn1" id="zipcode_bt">우편번호 검색</button>
                         	<br>
                         	<input type="text" name="address" id="address" class="address" readonly>
