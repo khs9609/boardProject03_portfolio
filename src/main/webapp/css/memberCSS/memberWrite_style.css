@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+.contents01 {
+	font-size : 30px;
+}
+.contents02 {
+	font-size : 24px;
+}
+.wrap {
+	background-image : url("../img/table_img.jpg");
+	background-size: cover;	
+}
+
+
+/* ====== header area ======  */
+
+
+.header_bg {
+	background-color: #fff;
+}
+.header {
+	display : flex;
+	justify-content : space-between;
+	margin : auto;
+	width : 1280px;
+	padding : 0 20px;
+	height : 100px;
+	/*
+	background-color : #1e90ff;
+	*/
+}
+
+.header > ul {
+	display : flex;
+	margin-top : 30px;
+}
+.header .logo  {
+	margin-top : -15px;
+}
+
+.header > ul > li {
+	font-size: 20px;
+}
+.header > ul > li > a {
+	padding : 10px 20px;
+}
+.header > ul > li > a:hover {
+	background-color: #000;
+	color : #fff;
+	transition : 1s ease;
+}
+
+.header > ul > li > a,
+.header > ul > li > div > a {
+	color : #000;
+}
+
+.header > .nav_title > li > .logo > a {
+	font-size : 40px;
+	font-weight: bold;
+	font-family: 'Jua', sans-serif;
+}
+
+.header > .nav_title > li:not(:first-child) {
+	margin-left : 40px;
+}
+.header > .nav_menu > li:not(:last-child) {
+	margin-right : 20px;
+}
+
+
+/* ====== create_wrap 부분 ====== */
+
+.create_wrap {
+	width : 1280px;
+	height : 900px;
+	margin : auto;
+	padding-top : 50px;
+	background-color : #b2bec3;
+	background-color: rgba( 255, 255, 255, 0.8 );
+	text-align : center;
+}
+.create_wrap input[type="text"],
+.create_wrap input[type="password"]{
+	width : 500px;
+	height : 60px;
+	padding-left : 10px;
+}
+.create_wrap .userid_info {
+	text-align : left;
+}
+
+.create_wrap ul li {
+	margin-top : 15px;
+}
+
+
+.create_wrap .bt_area{
+	margin-top : 15px;
+}
+
+.create_wrap .bt_area button {
+	width : 500px;
+	height : 60px;
+	background-color: blue;
+	color : #fff;
+}
+
+
+
+
+/* ====== footer ======  */
+footer {
+    text-align: center;
+    color : #fff;
+	background: rgb(42, 42, 43);
+    padding : 25px;
+    font-size : 18px;
+}
+
+
+
