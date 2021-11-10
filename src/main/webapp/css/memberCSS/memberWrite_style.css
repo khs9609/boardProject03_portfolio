@@ -129,11 +129,19 @@
     width : 100px;
 }
 .member_write .main dd {
-    width : calc(100% - 300px);
+    width : calc(100% - 400px);
 }
 .member_write .main dd,
 .member_write .info dd {
 	margin-left : 50px;
+}
+.member_write .main dd button {
+	margin-left : 20px;
+	padding : 5px;
+	width : 130px;
+	height : 43px;
+	background-color: #000;
+	color : #fff;
 }
 
 .member_write .main input[type="text"],
