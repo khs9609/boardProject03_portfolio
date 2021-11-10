@@ -100,8 +100,8 @@
 					<li><a href="boardList.do">커뮤니티</a></li>
 				</ul>
 				<ul class="nav_menu">
-					<li><a href="">로그인</a></li>
-					<li><a href="">회원가입</a></li>
+					<li><a href="memberLogin.do">로그인</a></li>
+					<li><a href="memberWrite.do">회원가입</a></li>
 				</ul>
 			</div>
 			
