@@ -69,43 +69,114 @@
 }
 
 
-/* ====== create_wrap 부분 ====== */
+/* ====== member_wrap 부분 ====== */
 
-.create_wrap {
-	width : 1280px;
-	height : 900px;
+.member_write {
+    margin : auto;
+    padding : 50px;
+    border-top : 2px solid #000;
+    width : 1280px;
+    background-color : #b2bec3;
+    background-color: rgba( 255, 255, 255, 0.9 );
+}
+.member_write .main,
+.member_write .info {
+    padding : 15px;
+}
+
+.member_write .main dl {
+    font-size : 0;
+    margin-top : 10px;
+}
+.member_write .main dl:first-child{
+    margin-top : 0px;
+}
+
+
+.member_write .info {
+    border-top : 1px dashed #ddd;
+    border-bottom: 1px solid #000;
+    font-size : 0;
+}
+
+.member_write .info dl {
+    display : inline-block;
+    width : 50%;
+    vertical-align: middle;   
+    margin-top : 10px;
+}
+.member_write .info dl:first-child {
+	margin-top : 0px;
+}
+.member_write .main dl,
+.member_write .info dl {
+	padding-left : 60px;
+	
+}
+
+.member_write .main dt,
+.member_write .main dd,
+.member_write .info dt,
+.member_write .info dd {
+    display: inline-block;
+    vertical-align: middle;
+    font-size : 18px;
+    padding-top : 10px;
+    padding-bottom : 10px;
+}
+.member_write .main dt,
+.member_write .info dt {
+    width : 100px;
+}
+.member_write .main dd {
+    width : calc(100% - 300px);
+}
+.member_write .main dd,
+.member_write .info dd {
+	margin-left : 50px;
+}
+
+.member_write .main input[type="text"],
+.member_write .main input[type="password"]{
+    width : 80%;
+}
+
+.member_write .main input[type="text"],
+.member_write .main input[type="password"],
+.member_write .info input[type="text"],
+.member_write .info input[type="password"] {
+    padding : 10px;
+    box-sizing: border-box;
+}
+.member_write .main .btn1,
+.member_write .info .btn1 {
+	padding : 0 10px;
+	height : 39.55px;
+    background-color: #000;
+    color : #fff;
+}
+.member_write .info .address {
+	width : 100%;
+	margin-top : 10px;
+}
+/* === bt_area ===	*/
+.bt_area {
 	margin : auto;
-	padding-top : 50px;
-	background-color : #b2bec3;
-	background-color: rgba( 255, 255, 255, 0.8 );
+	padding-top : 20px;
+	width : 1280px;
 	text-align : center;
 }
-.create_wrap input[type="text"],
-.create_wrap input[type="password"]{
-	width : 500px;
-	height : 60px;
-	padding-left : 10px;
-}
-.create_wrap .userid_info {
-	text-align : left;
-}
 
-.create_wrap ul li {
-	margin-top : 15px;
-}
-
-
-.create_wrap .bt_area{
-	margin-top : 15px;
-}
-
-.create_wrap .bt_area button {
-	width : 500px;
-	height : 60px;
-	background-color: blue;
+.bt_area button {
+	padding : 10px;
+	width : 200px;
+	background-color: #000;
 	color : #fff;
+	border-radius : 3px;
+	border : none;
+	font-size : 18px;
+	
 }
-
 
 
 
