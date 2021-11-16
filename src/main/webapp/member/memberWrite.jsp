@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="/resources/demos/style.css">
 
 <link rel="stylesheet" type="text/css" href="css/memberCSS/memberWrite_style.css">
-<title>Insert title here</title>
+<title>회원가입</title>
 </head>
 
 <style>
@@ -55,9 +55,12 @@
 				alert("아이디를 입력해주세요");
 				$("#userid").focus();
 				return false;
-			}
+			}  
 			
-			$.ajax({
+			
+			/* 중복아이티 체크 버튼 */
+ 			
+ 			$.ajax({
 				
 				type: "POST",
 				data : "userid="+userid,
@@ -78,12 +81,90 @@
 			
 			
 			
-		});
+		}); / 
 		
-		
+	
+		$("#bt_submit").click(function() {
+			
+			var userid = $("#userid").val();
+			var pass = $("#pass").val();
+			var pass_chk = $("#pass_chk").val();
+			var name = $("#name").val();
+			var phone = $("#phone").val();
+			
+			
+	    	userid = $.trim(userid);
+	    	pass = $.trim(pass);
+	    	name = $.trim(name);
+	    	phone = $.trim(phone);
+	    	
+			if(userid == ""){
+				alert("아이디를 입력해주세요");
+				$("userid").focus();
+				return false;
+			}
+			if(pass == ""){
+				alert("비밀번호를 입력해주세요");
+				$("pass").focus();
+				return false;
+			}
+			if(pass != pass_chk){
+				alert("비밀번호가 일치한지 다시 확인해주세요.");
+				return false;
+			}
+			if(name == ""){
+				alert("이름을 입력해주세요");
+				$("name").focus();
+				return false;
+			}
+			if(phone == ""){
+				alert("연락처를 입력해주세요");
+				$("phone").focus();
+				return false;
+			}
+			
+			if( !$(":input:radio[name=gender]:checked").val() ) {
+				alert("성별을 선택해주세요");
+				return false;
+			}
+			
+			if(zipcode == ""){
+				alert("우편번호를 검색해주세요.");
+				return false;
+			} 
+			
+			$("#userid").val(userid);
+			$("#pass").val(pass);
+			$("#name").val(name);
+			$("#phone").val(phone);
+			
+			var formData = $("#frm").serialize();
+			
+			$.ajax({
+				type : "POST",
+				data : formData,
+				url : "memberWriteSave.do",
+				dataType : "text",
+				success : function(result){
+					if(result == "ok"){
+						alert("가입완료");
+						location="memberLogin.do";
+					}else{
+						alert("가입 실패. \n 다시 한 번 확인해주세요.");
+					}
+				},
+				error : function() {
+					alert("오류가 발생했습니다. \n 다시 시도하거나, 관리자에게 문의주세요.");
+				}
+			});
+		}); 
 		
 		
 	});
+	
+
+	
+		
 </script>
 
 <body>
@@ -163,7 +244,7 @@
 				</div>
 			
 			<div class="bt_area">
-				<button type="button">가입하기</button>
+				<button type="button" id="bt_submit">가입하기</button>
 			</div>
 		</form>
 	</div>
