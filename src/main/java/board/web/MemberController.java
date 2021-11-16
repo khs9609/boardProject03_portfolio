@@ -36,6 +36,20 @@ public class MemberController {
 		return msg;
 	}
 	
+	/* 아이디 중복 체크 */
+	@RequestMapping("idCheck.do")
+	@ResponseBody
+	public String idCheck(MemberVO vo) throws Exception {
+		
+		String msg = "";
+		int count = memberService.countMember(vo);
+		
+		if(count == 0) {
+			msg = "ok";
+		}
+		
+		return msg;
+	}
 	
 	
 	

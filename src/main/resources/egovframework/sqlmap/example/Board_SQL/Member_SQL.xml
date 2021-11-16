@@ -26,6 +26,10 @@
 			)
 	</insert>
 
+	<select id="memberDAO.countMember" resultClass="java.lang.Integer">
+		SELECT COUNT(*) FROM nmember
+			WHERE userid=#userid#
+	</select>
 
 
 </sqlMap>

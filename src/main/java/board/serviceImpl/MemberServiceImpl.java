@@ -18,4 +18,9 @@ public class MemberServiceImpl implements MemberService {
 		return memberDAO.insertMember(vo);
 	}
 
+	@Override
+	public int countMember(MemberVO vo) throws Exception {
+		return memberDAO.countMember(vo);
+	}
+
 }

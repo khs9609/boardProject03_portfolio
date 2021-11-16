@@ -12,4 +12,8 @@ public class MemberDAO extends EgovAbstractDAO {
 		return (String) insert("memberDAO.insertMember", vo);
 	}
 
+	public int countMember(MemberVO vo) {
+		return (int) select("memberDAO.countMember", vo);
+	}
+
 }
