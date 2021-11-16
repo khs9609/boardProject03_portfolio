@@ -67,7 +67,7 @@
 				url: "idCheck.do",
 				dataType: "text",
 				success: function(msg) {
-					if(msg = "ok"){
+					if(msg == "ok"){
 						alert("사용가능한 아이디입니다.");
 					}else{
 						alert("이미 사용중인 아이디입니다.");
@@ -81,8 +81,8 @@
 			
 			
 			
-		}); / 
-		
+		}); 
+		 
 	
 		$("#bt_submit").click(function() {
 			
