@@ -82,6 +82,7 @@
 }
 
 .login_wrap .login_right {
+	display :inline-block;
 	background-color : #b2bec3;
 	background-color: rgba( 255, 255, 255, 0.8 );
 	text-align : center;
