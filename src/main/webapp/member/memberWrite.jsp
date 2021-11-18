@@ -185,7 +185,9 @@ function post() {
 <div class="wrap">
 	
 <!-- ===== header 부분 ===== -->
-	<div class="header_bg">
+	<%@ include file = "/include/header.jsp" %>
+	
+<!-- 	<div class="header_bg">
 		<div class="header">
 			<ul class="nav_title">
 				<li>
@@ -201,9 +203,7 @@ function post() {
 				<li><a href="memberWrite.do">회원가입</a></li>
 			</ul>
 		</div>
-		
-	</div>
-		
+	</div> -->
 		
 <!-- ===== member_wrap 부분 ===== -->			
 	<div class="member_write">
