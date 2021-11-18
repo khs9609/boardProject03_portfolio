@@ -37,6 +37,19 @@
 }
 </style>
 
+<!-- 카카오 우편번호 찾기 api -->
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+function post() {
+    new daum.Postcode({
+        oncomplete: function(data) {
+            document.querySelector("#zipcode").value = data.zonecode;
+            document.querySelector("#address").value =  data.address
+        }
+    }).open();
+}
+</script> 
+
 <script>
 	$(function() {
 		// 생년월일 선택
@@ -236,7 +249,7 @@
                         <dt>주소</dt>
                         <dd>
                         	<input type="text" name="zipcode" id="zipcode" placeholder="우편번호 검색을 클릭해주세요" readonly>
-                        	<button type="button" class="btn1" id="zipcode_bt">우편번호 검색</button>
+                        	<button type="button" class="btn1" id="zipcode_bt" onclick="post();">우편번호 검색</button>
                         	<br>
                         	<input type="text" name="address" id="address" class="address" readonly>
                         </dd>
