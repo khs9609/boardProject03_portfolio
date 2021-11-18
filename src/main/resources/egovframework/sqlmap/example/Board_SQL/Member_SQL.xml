@@ -32,8 +32,8 @@
 	</select>
 	
 	<select id="memberDAO.selectMember" resultClass="java.lang.Integer">
-		select count(*) from nmember
-			where userid=#userid# AND pass=#pass#
+		SELECT COUNT(*) FROM nmember
+			WHERE userid=#userid# AND pass=#pass#
 	</select>
 
 

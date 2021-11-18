@@ -1,6 +1,7 @@
 package board.web;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -52,12 +53,26 @@ public class MemberController {
 	}
 	
 	
-	
-	
 	/* 로그인 페이지*/
 	@RequestMapping("memberLogin.do")
 	public String loginWrite() {
 		
 		return "member/memberLogin";
 	}
+	
+	/* 로그인 처리*/
+	@ResponseBody
+	@RequestMapping("memberLoginSub.do")
+	public String loginSub(MemberVO vo, HttpSession session) throws Exception {
+		
+		String msg = "";
+		int count = memberService.selectMember(vo);
+		if(count == 1) {
+			session.setAttribute("SessionUserID", vo.getUserid());
+			msg = "ok";
+		}
+		
+		return msg;
+	}
+	
 }
