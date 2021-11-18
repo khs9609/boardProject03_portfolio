@@ -30,6 +30,11 @@
 		SELECT COUNT(*) FROM nmember
 			WHERE userid=#userid#
 	</select>
+	
+	<select id="memberDAO.selectMember" resultClass="java.lang.Integer">
+		select count(*) from nmember
+			where userid=#userid# AND pass=#pass#
+	</select>
 
 
 </sqlMap>

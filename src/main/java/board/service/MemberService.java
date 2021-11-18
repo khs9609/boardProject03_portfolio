@@ -7,4 +7,8 @@ public interface MemberService {
 	
 	//아이디 중복체크
 	public int countMember(MemberVO vo) throws Exception;
+	
+	//로그인 정보 확인
+	public int selectMember(MemberVO vo) throws Exception;
+	
 }
