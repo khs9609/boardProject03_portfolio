@@ -75,4 +75,14 @@ public class MemberController {
 		return msg;
 	}
 	
+	/* 로그아웃 처리*/
+	@RequestMapping("logout.do")
+	public String logout(HttpSession session) throws Exception{
+		
+		session.removeAttribute("SessionUserID");
+		
+		return "member/memberLogin";
+	}
+	
+	
 }
