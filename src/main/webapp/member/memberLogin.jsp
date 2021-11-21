@@ -30,7 +30,7 @@
 				return false;
 			}
 			if($("#pass") == ""){
-				alert("패스워드를 입력해주세요.");
+				alert("패스워드를 입력해주세요");
 				$("#pass").focus();
 				return false;
 			}
