@@ -11,7 +11,6 @@
 
 <script>
 	$(function(){
-		
 		$("#logout_link").click(function(){
 			if(confirm("정말로 로그아웃하시겠습니까?") ){
 				location="logout.do";
