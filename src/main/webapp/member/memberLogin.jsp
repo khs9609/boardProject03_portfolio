@@ -45,10 +45,10 @@
 				dataType : "text", 
 				success : function(msg){ 
 					if(msg == "ok") {
-						alert(userid+"님 로그인되었습니다.")
+						alert(userid+"님 로그인되었습니다")
 						location= "boardList.do";
 					} else {
-						alert("아이디와 패스워드를 다시 확인해주세요.");				
+						alert("아이디와 패스워드를 다시 확인해주세요!");				
 					}
 				},
 				error : function() { 
