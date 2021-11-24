@@ -89,8 +89,7 @@
 		
 <!-- ===== footer 부분 ===== -->	
 		<footer>
-			(c)2021 김효섭 Board Content Site <br>
-			울산광역시 남구 남구동 남구빌라 123-12 [ tel. 010-6543-9876 ]
+			<%@ include file = "/include/footer.jsp" %>
 		</footer>
 		
 </div>
