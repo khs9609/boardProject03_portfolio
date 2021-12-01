@@ -14,6 +14,21 @@ public class BoardVO {
 	public int startIndex = 1;
 	public int endIndex = 10;
 	
+	public String searchText;
+	public String searchGubun;
+	
+	public String getSearchText() {
+		return searchText;
+	}
+	public void setSearchText(String searchText) {
+		this.searchText = searchText;
+	}
+	public String getSearchGubun() {
+		return searchGubun;
+	}
+	public void setSearchGubun(String searchGubun) {
+		this.searchGubun = searchGubun;
+	}
 	
 	public int getViewPage() {
 		return viewPage;
