@@ -20,7 +20,7 @@
 		
 		<!-- 게시물 목록 -->
 		<select id="boardDAO.selectBoard" resultClass="egovMap">
-			select b.* from(
+			SELECT b.* from(
 				SELECT rownum rn, a.* FROM(
 					SELECT 
 						unq,
@@ -29,6 +29,11 @@
 						hits,
 						to_char(rdate,'yyyy-mm-dd') rdate
 					FROM nboard
+ 					<isNotNull property="searchGubun"> <!-- null일때는 동작하지 않는다 -->
+						<isNotNull property="searchText">
+							WHERE $searchGubun$ like '%$searchText$%'	
+						</isNotNull> 
+					</isNotNull> 
 					ORDER BY unq DESC
 				) a ) b
 				WHERE rn >= #startIndex# and rn <![CDATA[ <= ]]> #endIndex#
