@@ -215,11 +215,24 @@
 .board_search {
 	margin-top : 20px;
 	text-align : center;
+	font-size: 0;
 }
+
+.board_search select {
+	width : 70px;
+	height : 50px;
+    font-size : 18px;	
+    color : #535c68;
+    margin-right : 10px;
+
+    
+}
+
 .board_search input[type="text"] {
 	padding : 10px;
 	width : 350px;
     font-size : 18px;
+	background-color: #ddd;
 }
 .board_search a {
 	padding : 10px 30px;
@@ -228,6 +241,7 @@
 	border-radius : 3px;
     color : #fff;
 	background-color: #000;
+	margin-left : 10px;
 }
 
 
