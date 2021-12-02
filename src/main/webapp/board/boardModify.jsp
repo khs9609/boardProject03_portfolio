@@ -95,32 +95,13 @@
 <!-- ===== header 부분 ===== -->
 <%@ include file = "/include/board_header.jsp" %>	
 		
-<!-- ===== main_index_01 부분 ===== -->
-		
-<!-- 		<div class="main_index_01">
-			<ul class="intro">
-				<li>
-					<h1>사이트 소개</h1>
-				</li>
-				<li>
-					<div class="intro_content">
-						이 사이트는 게시판을 만들기 위해 제작한 사이트입니다.<br>
-						이렇게 넣어보니 이쁘구만<br>
-						하단의 커뮤니티 이동 버튼을 통해 만들어 게시판을 열람할 수 있습니다. 버튼을 눌러 게시판을 확인해주세요.
-					</div>
-				</li>
-				<li>
-					<button type="button">커뮤니티로 이동 ></button>
-				</li>
-			</ul>		
-		</div> -->
 		
 <!-- ===== board_wrap 부분 ===== -->			
 
 		<div class="board_wrap">
 			<div class="board_title">
-				<strong>글쓰기</strong>
-				<p>작성된 게시글이 커뮤니티의 게시글로 게시됩니다.</p>
+				<strong>수정하기</strong>
+				<p>작성된 게시글과 일치하는 암호를 입력하면 저장처리 됩니다.</p>
 			</div>
 			
 		<form name="frm" id="frm">
