@@ -15,7 +15,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="css/List_style.css">
-<title>Insert title here</title>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+<title>게시판 목록보기</title>
 </head>
 <style>
 
@@ -43,17 +47,17 @@
 		<div class="main_index_01">
 			<ul class="intro">
 				<li>
-					<h1>사이트 소개</h1>
+					<h1>커뮤니티</h1>
 				</li>
 				<li>
 					<div class="intro_content">
-						이 사이트는 게시판을 만들기 위해 제작한 사이트입니다.<br>
-						이렇게 넣어보니 이쁘구만<br>
-						하단의 커뮤니티 이동 버튼을 통해 만들어 게시판을 열람할 수 있습니다. 버튼을 눌러 게시판을 확인해주세요.
+						커뮤니티 게시판입니다.<br>
+						상단의 메뉴를 통해 회원가입을 하시고<br>
+						로그인 후 이용바랍니다.
 					</div>
 				</li>
 				<li>
-					<button type="button" onclick="location='boardList.do' ">커뮤니티로 이동 ></button>
+					<button type="button" onclick="location='memberLogin.do' ">회원가입하기 ></button>
 				</li>
 			</ul>		
 		</div>
@@ -102,9 +106,16 @@
 			</div>
 			
 			<div class="board_search">
-				<form id="frm" name="frm">
-					<input type="text" placeholder="검색어를 입력해주세요">
-					<a href="#">검색</a>
+				<form id="searchFrm" name="searchFrm" method="post" action="boardList.do">
+					
+					<select name="searchGubun" id="searchGubun">
+						<option value="title">제목</option>
+						<option value="name">글쓴이</option>
+						<option value="content">내용</option>
+					</select>
+					
+					<input type="text" name="searchText" class="searchText" placeholder="검색어를 입력해주세요">
+					<button type="submit">검색</button>
 				</form>
 			</div>
 			
