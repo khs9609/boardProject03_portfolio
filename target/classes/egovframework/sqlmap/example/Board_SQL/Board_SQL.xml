@@ -42,6 +42,11 @@
 		<!-- 글 total 개수 출력 -->
 		<select id="boardDAO.totalBoard" resultClass="java.lang.Integer">
 			select count(*) total from nboard
+ 				<isNotNull property="searchGubun"> <!-- null일때는 동작하지 않는다 -->
+					<isNotNull property="searchText">
+						WHERE $searchGubun$ like '%$searchText$%'	
+					</isNotNull> 
+				</isNotNull> 
 		</select>
 		
 		<!-- 글 상세보기 -->
