@@ -95,8 +95,8 @@
 
 		<div class="board_wrap">
 			<div class="board_title">
-				<strong>글쓰기</strong>
-				<p>작성된 게시글이 커뮤니티의 게시글로 게시됩니다.</p>
+				<strong>상세보기</strong>
+				<p>게시글의 내용을 확인하고 수정 및 삭제 또한 할 수 있습니다.</p>
 			</div>
 			
 		<form id="frm">
