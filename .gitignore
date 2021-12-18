@@ -15,13 +15,6 @@ local.properties
 .loadpath
 .recommenders
 
-
-# Eclipse Core
-.project
-
-#JDT-specific (Eclipse Java Development Tools)
-.classpath
-
 # External tool builders
 .externalToolBuilders/
 
@@ -36,6 +29,14 @@ local.properties
 
 # CDT- autotools
 .autotools
+
+
+# Eclipse Core
+.project
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
 
 # Java annotation processor (APT)
 .factorypath
